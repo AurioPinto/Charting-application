@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import value from "../views/value.vue";
 import jikan from "../views/jikan.vue";
 
 Vue.use(VueRouter);
@@ -15,6 +16,11 @@ const routes = [
     path: "/",
     name: "jikan",
     component: jikan
+  },
+  {
+    path: "/",
+    name: "value",
+    component: value
   },
   {
     path: "/about",
