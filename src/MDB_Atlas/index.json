@@ -1,5 +1,0 @@
-db.apdevice( {
-    user_id: "abc123",
-    age: 55,
-    status: "A"
- } )
