@@ -1,0 +1,14 @@
+{
+  "name": "apdevice",
+  "version": "1.0.0",
+  "description": "APIs for shanghai apdevice",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error:no test server" && exit 1"
+  },
+  "keywords": [
+    "black"
+  ],
+  "author": "Aurio Pinto",
+  "license": "MIT"
+}
