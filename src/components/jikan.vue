@@ -6,6 +6,17 @@
         {results.text}
       </li>
     </ul>
+    <div>{{ info }}</div>
+    <div class="columns medium-3" v-for="resultado in resulta" :key="resultado">
+      <div class="card">
+        <div class="card-divider">
+          {{ resultado.title }}
+        </div>
+        <div class="card-section">
+          <p>{{ resultado.abstract }}.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -15,11 +26,26 @@ export default {
   components: {},
   data() {
     return {
-      user: {
-        name: "VueJsDialog"
-        // note: ""
-      },
-      results: []
+      results: "",
+      info: null,
+      resulta: [
+        {
+          title: "the very first post",
+          abstract: "lorem ipsum some test dimpsum"
+        },
+        {
+          title: "and then there was the second",
+          abstract: "lorem ipsum some test dimsum"
+        },
+        {
+          title: "third time's a charm",
+          abstract: "lorem ipsum some test dimsum"
+        },
+        {
+          title: "four the last time",
+          abstract: "lorem ipsum some test dimsum"
+        }
+      ]
     };
   },
   methods: {
@@ -30,6 +56,11 @@ export default {
           this.results = data.results;
         });
     }
+  },
+  mounted() {
+    axios
+      .get("https://api.coindesk.com/v1/bpi/currentprice.json")
+      .then(response => (this.info = response));
   }
 };
 </script>
