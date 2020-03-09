@@ -1,8 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-// import value from "../views/value.vue";
-import jikan from "../views/jikan.vue";
+import value from "../views/value.vue";
+// import jikan from "../views/jikan.vue";
 
 Vue.use(VueRouter);
 
@@ -12,16 +12,16 @@ const routes = [
     name: "home",
     component: Home
   },
-  {
-    path: "/jikan",
-    name: "jikan",
-    component: jikan
-  },
   // {
-  //   path: "/value",
-  //   name: "value",
-  //   component: value
+  //   path: "/jikan",
+  //   name: "jikan",
+  //   component: jikan
   // },
+  {
+    path: "/value",
+    name: "value",
+    component: value
+  },
   {
     path: "/about",
     name: "about",
@@ -34,7 +34,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  mode: "history",
+  // mode: "history",
   base: process.env.BASE_URL,
   routes
 });
