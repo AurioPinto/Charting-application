@@ -1,8 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import svg from "../views/svg.vue";
 import Home from "../views/Home.vue";
-import value from "../views/value.vue";
-// import jikan from "../views/jikan.vue";
+// import value from "../views/value.vue";
+import jikan from "../views/jikan.vue";
 
 Vue.use(VueRouter);
 
@@ -12,16 +13,21 @@ const routes = [
     name: "home",
     component: Home
   },
-  // {
-  //   path: "/jikan",
-  //   name: "jikan",
-  //   component: jikan
-  // },
   {
-    path: "/value",
-    name: "value",
-    component: value
+    path: "/jikan",
+    name: "jikan",
+    component: jikan
   },
+  {
+    path: "/svg",
+    name: "svg",
+    component: svg
+  },
+  // {
+  //   path: "/value",
+  //   name: "value",
+  //   component: value
+  // },
   {
     path: "/about",
     name: "about",
