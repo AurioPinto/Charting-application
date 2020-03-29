@@ -17,6 +17,15 @@
         </div>
       </div>
     </div>
+    <button @click="AddItem" type="button" name="button">Add</button>
+    <div v-for="(item, Itemindex) in items" :key="'item' + Itemindex">
+      <input type="text" v-model="items[Itemindex]" />(Works)
+      {{ items }}
+    </div>
+    <a v-bind:href="blog">Aurio Pinto</a>
+    <section>
+      <p>I'm centered with Flexbox!</p>
+    </section>
   </div>
 </template>
 
@@ -28,6 +37,8 @@ export default {
     return {
       results: "",
       info: null,
+      items: [],
+      blog: "https://www.auriopinto.com.cn/#/",
       resulta: [
         {
           title: "the very first post",
@@ -57,6 +68,11 @@ export default {
         });
     }
   },
+  shared: {
+    AddItem: function() {
+      this.items.push("New Value" + this.items.lenght);
+    }
+  },
   mounted() {
     axios
       .get("https://api.coindesk.com/v1/bpi/currentprice.json")
@@ -78,6 +94,18 @@ export default {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    section {
+      display: flex;
+      width: 50%;
+      height: 200px;
+      margin: auto;
+      border-radius: 10px;
+      border: 3px dashed #1c87c9;
+      p {
+        margin: auto; /* Important */
+        text-align: center;
+      }
+    }
   }
 }
 </style>

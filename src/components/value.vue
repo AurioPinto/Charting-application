@@ -1,5 +1,4 @@
-﻿﻿/* eslint-disable no-dupe-keys */ /* eslint-disable vue/no-dupe-keys */
-<template>
+﻿<template>
   <div class="detail">
     <!-- <p class="detail-title">Aurio Pinto</p> -->
     <!-- First screen -->
@@ -10,7 +9,7 @@
           v-show="screenIndex === 0 || screenIndex === 1"
           :class="{ 'first-title-moved': screenIndex === 1 }"
         >
-          My Vision
+          Research
         </div>
       </transition>
       <transition name="first-img" @after-enter="pageEnter(0)">
@@ -23,7 +22,7 @@
     <transition name="life-way" @after-enter="pageEnter(1)">
       <!-- <div class="life-way" v-show="screenIndex === 2" :class="{'life-way-first-second':screenIndex === 2 && prevIndex === 1,'life-way-second-third': screenIndex === 2 && prevIndex === 3}"> -->
       <div class="life-way" v-show="screenIndex === 1">
-        Shaping a World with New Technologies
+        Image enhancement and fast recognition of low-quality QR codes
       </div>
     </transition>
     <!--Third screen -->
@@ -39,7 +38,7 @@
           v-show="screenIndex === 2 || screenIndex === 3"
           :class="{ 'first-title-moved': screenIndex === 3 }"
         >
-          <span>My Vision Enablers</span>
+          <span>Project</span>
         </div>
       </transition>
     </template>
@@ -50,7 +49,7 @@
         v-show="screenIndex === 3"
         :class="{ boxEn: language !== 'CHS' }"
       >
-        <img src="../assets/value/value_4.png" v-if="language === 'CHS'" />
+        <img src="../assets/value/value.png" v-if="language === 'CHS'" />
         <img src="../assets/value/value_4_en.png" v-else />
       </div>
     </transition>
@@ -62,7 +61,7 @@
           v-show="screenIndex === 4 || screenIndex === 5"
           :class="{ 'first-title-moved': screenIndex === 5 }"
         >
-          <span>My Values</span>
+          <span>Research</span>
         </div>
       </transition>
       <transition name="vi-img" @after-enter="pageEnter(4)">
@@ -141,7 +140,7 @@ export default {
   },
   mounted() {
     // eslint-disable-next-line no-console
-    console.log("111");
+    // console.log("111");
     eventHandle.addEvent(document, "mousewheel", this.mouseHandle);
     eventHandle.addEvent(document, "DOMMouseScroll", this.mouseHandle);
     document.body.style.overflow = document.documentElement.style.overflow =
@@ -173,6 +172,9 @@ export default {
           this.forwardFlag[page + 1] = false;
         }
       }, 1000);
+    },
+    goBackToVI() {
+      this.$router.push("/");
     },
     mouseHandle(event) {
       event = eventHandle.getEvent(event);
@@ -261,7 +263,7 @@ body {
   width: j(32);
   position: fixed;
   bottom: j(60);
-  background: url("../assets/value/logo.png") no-repeat;
+  background: url("../assets/value/seta.png") no-repeat;
   background-size: cover;
   z-index: 40;
 }
@@ -301,7 +303,7 @@ body {
     height: j(32);
     width: j(32);
     transform: rotateZ(-90deg);
-    background: url("../assets/value/logo.png") no-repeat;
+    background: url("../assets/value/seta.png") no-repeat;
     background-size: cover;
   }
 }
@@ -315,7 +317,7 @@ body {
   bottom: 0;
   width: j(1920);
   // height: j(1010);
-  position: fixed;
+  // position: fixed;
   box-sizing: border-box;
   background-color: #fff;
   overflow: hidden !important;
@@ -338,7 +340,7 @@ body {
     top: 0;
     bottom: 0;
     right: 40px;
-    background: url("../assets/ap.jpg") no-repeat;
+    background: url("../assets/pw.shanghai.jpg") no-repeat;
     background-size: contain;
     background-size: 106% 96%;
     transition: all 0.4s ease;
@@ -383,9 +385,11 @@ body {
     top: j(245);
     left: j(202);
     z-index: 25;
+    // text-align: center;
     img {
-      height: 100%;
-      width: 100%;
+      text-align: center;
+      // height: 100%;
+      // width: 100%;
     }
     &.boxEn {
       width: j(1553);
@@ -405,7 +409,7 @@ body {
   .vi-img {
     width: j(1100);
     // height: j(1010);
-    background: url("../assets/value/value_5.jpg") no-repeat;
+    background: url("../assets/value/nio.jpg") no-repeat;
     background-size: cover;
     background-position: center center;
     position: absolute;
