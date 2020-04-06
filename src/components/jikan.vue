@@ -18,8 +18,6 @@ export default {
     return {
       results: "",
       keyWords: ""
-      // info: null,
-      // items: [],
       // blog: "https://www.auriopinto.com.cn/#/",
     };
   },
