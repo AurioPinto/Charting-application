@@ -2,8 +2,9 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import svg from "../views/svg.vue";
 import Home from "../views/Home.vue";
-// import value from "../views/value.vue";
+import value from "../views/value.vue";
 import jikan from "../views/jikan.vue";
+import clips from "../views/clips.vue"
 
 Vue.use(VueRouter);
 
@@ -23,11 +24,16 @@ const routes = [
     name: "svg",
     component: svg
   },
-  // {
-  //   path: "/value",
-  //   name: "value",
-  //   component: value
-  // },
+  {
+    path: "/clips",
+    name: "clips",
+    component: clips
+  },
+  {
+    path: "/value",
+    name: "value",
+    component: value
+  },
   {
     path: "/about",
     name: "about",
