@@ -1,5 +1,5 @@
 <template>
-  <div class="value">
+  <div class="format">
     <value></value>
   </div>
 </template>
@@ -7,7 +7,7 @@
 <script>
 import value from "../components/value";
 export default {
-  name: "value11",
+  name: "value2",
   components: { value },
   data: function() {
     return {};
@@ -16,9 +16,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.value {
-  height: 100%;
-  // background-color: #00263c;
+.format {
   min-height: 100vh;
+  // background-image: url("../assets/4.png");
+  // background-size: cover;
+  background-color: #00a8a8;
+;
 }
 </style>

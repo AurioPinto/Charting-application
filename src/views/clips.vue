@@ -17,7 +17,9 @@ export default {
 
 <style lang="scss" scoped>
 .clips {
-  background-color: #ffffff;
+  // background-color: #ffffff;
   min-height: 100vh;
+  background-image: url("../assets/backg.jpg");
+  background-size: cover;
 }
 </style>

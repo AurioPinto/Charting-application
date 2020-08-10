@@ -7,8 +7,8 @@
 <script>
 // import svg from "../components/svg";
 export default {
-  name: "index",
-  //   components: { svg },
+  name: "svg2",
+  // components: { svg },
   data: function() {
     return {};
   }
@@ -17,7 +17,7 @@ export default {
 
 <style lang="scss" scoped>
 .unix {
-  background-color: #00263c;
+  background-color: #ffffff;
   min-height: 100vh;
 }
 </style>
